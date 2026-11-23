@@ -69,29 +69,13 @@
           <!-- Bộ chuyển đổi năm -->
           <div id="year-switcher" class="flex items-center gap-1.5 bg-slate-100 p-1.5 rounded-2xl self-start md:self-auto">
           <button type="button" data-action="step-year" data-delta="-1" disabled="" class="p-2 rounded-xl text-slate-600 hover:bg-white hover:text-slate-900 disabled:opacity-35 disabled:hover:bg-transparent transition cursor-pointer disabled:cursor-not-allowed" aria-label="Năm trước">
-            <svg class="w-4 h-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
-          
-            <button type="button" data-action="select-year" data-year="2027" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 shadow-sm">
-              2027
-            </button>
-          
-            <button type="button" data-action="select-year" data-year="2028" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer text-slate-600 hover:text-slate-900">
-              2028
-            </button>
-          
-            <button type="button" data-action="select-year" data-year="2029" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer text-slate-600 hover:text-slate-900">
-              2029
-            </button>
-          
-            <button type="button" data-action="select-year" data-year="2030" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer text-slate-600 hover:text-slate-900">
-              2030
-            </button>
-          
+          <button type="button" data-action="select-year" data-year="2027" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 shadow-sm">2027</button><button type="button" data-action="select-year" data-year="2028" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer text-slate-600 hover:text-slate-900">2028</button><button type="button" data-action="select-year" data-year="2029" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer text-slate-600 hover:text-slate-900">2029</button><button type="button" data-action="select-year" data-year="2030" class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer text-slate-600 hover:text-slate-900">2030</button>
           <button type="button" data-action="step-year" data-delta="1" class="p-2 rounded-xl text-slate-600 hover:bg-white hover:text-slate-900 disabled:opacity-35 disabled:hover:bg-transparent transition cursor-pointer disabled:cursor-not-allowed" aria-label="Năm sau">
-            <svg class="w-4 h-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
             </svg>
           </button>
@@ -112,15 +96,16 @@
             </div>
             <div>
               <div class="text-xs font-medium uppercase tracking-wider text-slate-500">Nghỉ lễ hưởng nguyên lương</div>
-              <div class="flex items-baseline gap-2 mt-0.5">
+              <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mt-0.5">
                 <span class="text-2xl font-bold text-slate-900">13 ngày</span>
-                <span class="text-xs text-rose-600 font-medium">(7 đợt lễ)</span>
+                <span class="text-xs text-rose-600 font-medium">7 đợt lễ</span>
+                <span class="text-xs text-orange-600 font-semibold">+ 3 ngày bù</span>
               </div>
             </div>
           </div>
 
           <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm flex items-center gap-4">
-            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+            <div class="w-12 h-12 rounded-2xl bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0">
               <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
               </svg>
@@ -128,8 +113,8 @@
             <div>
               <div class="text-xs font-medium uppercase tracking-wider text-slate-500">Tổng ngày cao điểm du lịch</div>
               <div class="flex items-baseline gap-2 mt-0.5">
-                <span class="text-2xl font-bold text-slate-900">23 ngày</span>
-                <span class="text-xs text-amber-700 font-medium">gồm bù &amp; cuối tuần kề lễ</span>
+                <span class="text-2xl font-bold text-slate-900">30 ngày</span>
+                <span class="text-xs text-yellow-700 font-medium">gồm bù &amp; liền kề cuối tuần</span>
               </div>
             </div>
           </div>
@@ -179,8 +164,12 @@
               <span class="font-medium text-slate-700">Chính lễ (Hưởng nguyên lương)</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-4 h-4 rounded-md bg-amber-100 border border-amber-400 inline-block"></span>
-              <span class="font-medium text-slate-700">Nghỉ bù / Liền kề lễ (Đông đúc)</span>
+              <span class="w-4 h-4 rounded-md bg-orange-500 inline-block shadow-sm"></span>
+              <span class="font-medium text-slate-700">Nghỉ bù (Hưởng nguyên lương)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-md bg-yellow-100 border border-yellow-400 inline-block"></span>
+              <span class="font-medium text-slate-700">Liền kề đến cuối tuần trước/sau (Đông đúc)</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="w-4 h-4 rounded-md bg-slate-100 border border-slate-300 inline-block"></span>
@@ -194,11 +183,11 @@
 
           <!-- Các nút bật/tắt hiển thị -->
           <div id="filter-controls" class="flex flex-wrap items-center gap-2.5">
-          <button type="button" data-action="toggle-bridge" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium border transition cursor-pointer bg-amber-50 border-amber-300 text-amber-900">
-            <span class="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[10px] bg-amber-500 text-white">
+          <button type="button" data-action="toggle-bridge" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium border transition cursor-pointer bg-yellow-50 border-yellow-400 text-yellow-900">
+            <span class="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[10px] bg-yellow-500 text-white">
               ✓
             </span>
-            Hiện vùng đệm đông đúc
+            Hiện ngày liền kề cuối tuần
           </button>
 
           <button type="button" data-action="toggle-weekends" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium border transition cursor-pointer bg-slate-100 border-slate-300 text-slate-900">
@@ -241,17 +230,17 @@
                 </div>
                 <div class="px-3 pb-3 grid grid-cols-7 gap-1 flex-1">
                   <div class="h-9"></div><div class="h-9"></div><div class="h-9"></div><div class="h-9"></div>
-                  <button type="button" data-action="select-day" data-date="2027-01-01" title="01/01/2027 — Tết Dương lịch (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (Thứ Sáu)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-01-01" title="01/01/2027 — Tết Dương lịch (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (Thứ Sáu)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">1</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-01-02" title="02/01/2027 — Cuối tuần Tết Dương lịch (Vùng đệm đông đúc). Kỳ nghỉ 3 ngày đầu năm." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-01-02" title="02/01/2027 — Cuối tuần sau Tết Dương lịch (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Cuối tuần liền kề sau lễ tạo kỳ nghỉ 3 ngày đầu năm." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">2</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-01-03" title="03/01/2027 — Cuối tuần Tết Dương lịch (Vùng đệm đông đúc). Ngày cuối kỳ nghỉ Tết Dương lịch." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-01-03" title="03/01/2027 — Cuối tuần sau Tết Dương lịch (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Ngày cuối kỳ nghỉ Tết Dương lịch." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">3</span>
                     
                   </button>
@@ -412,7 +401,12 @@
               <article id="month-card-1" class="bg-white rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-300 flex flex-col overflow-hidden hover:shadow-md">
                 <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
                   <h2 class="text-base font-bold text-slate-900">Tháng 2</h2>
-                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-rose-100 text-rose-700">5 ngày lễ</span>
+                  
+                <div class="flex items-center gap-1">
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-rose-100 text-rose-700">5 lễ</span>
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-orange-100 text-orange-700">+2 bù</span>
+                </div>
+              
                 </div>
                 <div class="px-3 pt-3 pb-1 grid grid-cols-7 gap-1 text-center">
                   <div class="text-[11px] font-semibold py-1 text-slate-400">T2</div><div class="text-[11px] font-semibold py-1 text-slate-400">T3</div><div class="text-[11px] font-semibold py-1 text-slate-400">T4</div><div class="text-[11px] font-semibold py-1 text-slate-400">T5</div><div class="text-[11px] font-semibold py-1 text-slate-400">T6</div><div class="text-[11px] font-semibold py-1 text-slate-500">T7</div><div class="text-[11px] font-semibold py-1 text-rose-500">CN</div>
@@ -434,37 +428,37 @@
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-02-04" title="04/02/2027 — Tết Nguyên đán (28 Tết) (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (1/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-02-04" title="04/02/2027 — Tết Nguyên đán (28 Tết) (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (1/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">4</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-02-05" title="05/02/2027 — Tết Nguyên đán (29 Tết) (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (2/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-02-05" title="05/02/2027 — Tết Nguyên đán (29 Tết) (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (2/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">5</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-02-06" title="06/02/2027 — Mùng 1 Tết Đinh Mùi (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (3/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-02-06" title="06/02/2027 — Mùng 1 Tết Đinh Mùi (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (3/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">6</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-02-07" title="07/02/2027 — Mùng 2 Tết Đinh Mùi (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (4/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-02-07" title="07/02/2027 — Mùng 2 Tết Đinh Mùi (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (4/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">7</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-02-08" title="08/02/2027 — Mùng 3 Tết Đinh Mùi (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (5/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-02-08" title="08/02/2027 — Mùng 3 Tết Đinh Mùi (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (5/5)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">8</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-02-09" title="09/02/2027 — Mùng 4 Tết (Nghỉ bù) (Vùng đệm đông đúc). Nghỉ bù do Mùng 1–2 trùng cuối tuần." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-02-09" title="09/02/2027 — Mùng 4 Tết (Nghỉ bù) (Ngày nghỉ bù — Hưởng nguyên lương). Ngày nghỉ bù hưởng nguyên lương do Mùng 1 trùng Thứ Bảy." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-orange-500 text-white font-bold shadow-sm hover:bg-orange-600">
                     <span class="pointer-events-none">9</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-02-10" title="10/02/2027 — Mùng 5 Tết (Nghỉ bù) (Vùng đệm đông đúc). Ngày cuối kỳ nghỉ Tết 7 ngày." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-02-10" title="10/02/2027 — Mùng 5 Tết (Nghỉ bù) (Ngày nghỉ bù — Hưởng nguyên lương). Ngày nghỉ bù hưởng nguyên lương do Mùng 2 trùng Chủ Nhật." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-orange-500 text-white font-bold shadow-sm hover:bg-orange-600">
                     <span class="pointer-events-none">10</span>
                     
                   </button>
@@ -586,6 +580,16 @@
                           <div class="flex items-start gap-1.5 text-[11px] leading-snug">
                             <span class="font-bold text-rose-600 shrink-0">08/02</span>
                             <span class="text-slate-700 truncate" title="Mùng 3 Tết Đinh Mùi">Mùng 3 Tết Đinh Mùi</span>
+                          </div>
+                        
+                          <div class="flex items-start gap-1.5 text-[11px] leading-snug">
+                            <span class="font-bold text-orange-600 shrink-0">09/02</span>
+                            <span class="text-slate-700 truncate" title="Mùng 4 Tết (Nghỉ bù)">Mùng 4 Tết (Nghỉ bù)</span>
+                          </div>
+                        
+                          <div class="flex items-start gap-1.5 text-[11px] leading-snug">
+                            <span class="font-bold text-orange-600 shrink-0">10/02</span>
+                            <span class="text-slate-700 truncate" title="Mùng 5 Tết (Nghỉ bù)">Mùng 5 Tết (Nghỉ bù)</span>
                           </div>
                         
                   </div>
@@ -846,17 +850,17 @@
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-04-16" title="16/04/2027 — Giỗ Tổ Hùng Vương (Nghỉ lễ hưởng nguyên lương). Mùng 10/3 Âm lịch (Thứ Sáu) — Hưởng nguyên lương." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-04-16" title="16/04/2027 — Giỗ Tổ Hùng Vương (Chính lễ — Hưởng nguyên lương). Mùng 10/3 Âm lịch (Thứ Sáu) — Hưởng nguyên lương." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">16</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-04-17" title="17/04/2027 — Cuối tuần dịp Giỗ Tổ (Vùng đệm đông đúc). Kỳ nghỉ 3 ngày cuối tuần." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-04-17" title="17/04/2027 — Cuối tuần sau dịp Giỗ Tổ (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Cuối tuần liền kề sau lễ tạo kỳ nghỉ 3 ngày." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">17</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-04-18" title="18/04/2027 — Cuối tuần dịp Giỗ Tổ (Vùng đệm đông đúc). Ngày cuối kỳ nghỉ Giỗ Tổ." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-04-18" title="18/04/2027 — Cuối tuần sau dịp Giỗ Tổ (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Ngày cuối kỳ nghỉ Giỗ Tổ." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">18</span>
                     
                   </button>
@@ -916,7 +920,7 @@
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-04-30" title="30/04/2027 — Ngày Giải phóng miền Nam (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-04-30" title="30/04/2027 — Ngày Giải phóng miền Nam (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">30</span>
                     
                   </button>
@@ -942,24 +946,29 @@
               <article id="month-card-4" class="bg-white rounded-2xl border border-slate-200/90 shadow-sm transition-all duration-300 flex flex-col overflow-hidden hover:shadow-md">
                 <div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
                   <h2 class="text-base font-bold text-slate-900">Tháng 5</h2>
-                  <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-rose-100 text-rose-700">1 ngày lễ</span>
+                  
+                <div class="flex items-center gap-1">
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-rose-100 text-rose-700">1 lễ</span>
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-orange-100 text-orange-700">+1 bù</span>
+                </div>
+              
                 </div>
                 <div class="px-3 pt-3 pb-1 grid grid-cols-7 gap-1 text-center">
                   <div class="text-[11px] font-semibold py-1 text-slate-400">T2</div><div class="text-[11px] font-semibold py-1 text-slate-400">T3</div><div class="text-[11px] font-semibold py-1 text-slate-400">T4</div><div class="text-[11px] font-semibold py-1 text-slate-400">T5</div><div class="text-[11px] font-semibold py-1 text-slate-400">T6</div><div class="text-[11px] font-semibold py-1 text-slate-500">T7</div><div class="text-[11px] font-semibold py-1 text-rose-500">CN</div>
                 </div>
                 <div class="px-3 pb-3 grid grid-cols-7 gap-1 flex-1">
                   <div class="h-9"></div><div class="h-9"></div><div class="h-9"></div><div class="h-9"></div><div class="h-9"></div>
-                  <button type="button" data-action="select-day" data-date="2027-05-01" title="01/05/2027 — Ngày Quốc tế Lao động (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (Thứ Bảy)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-05-01" title="01/05/2027 — Ngày Quốc tế Lao động (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (Thứ Bảy)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">1</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-05-02" title="02/05/2027 — Cuối tuần dịp 30/4 – 1/5 (Vùng đệm đông đúc). Cao điểm du lịch lễ 4 ngày." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-05-02" title="02/05/2027 — Cuối tuần dịp 30/4 – 1/5 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Cuối tuần nằm trong chuỗi cao điểm du lịch lễ 4 ngày." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">2</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-05-03" title="03/05/2027 — Nghỉ bù 1/5 (Vùng đệm đông đúc). Nghỉ bù Thứ Hai do 1/5 rơi vào Thứ Bảy." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-05-03" title="03/05/2027 — Nghỉ bù 1/5 (Ngày nghỉ bù — Hưởng nguyên lương). Ngày nghỉ bù Thứ Hai hưởng nguyên lương do 1/5 rơi vào Thứ Bảy." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-orange-500 text-white font-bold shadow-sm hover:bg-orange-600">
                     <span class="pointer-events-none">3</span>
                     
                   </button>
@@ -1111,6 +1120,11 @@
                           <div class="flex items-start gap-1.5 text-[11px] leading-snug">
                             <span class="font-bold text-rose-600 shrink-0">01/05</span>
                             <span class="text-slate-700 truncate" title="Ngày Quốc tế Lao động">Ngày Quốc tế Lao động</span>
+                          </div>
+                        
+                          <div class="flex items-start gap-1.5 text-[11px] leading-snug">
+                            <span class="font-bold text-orange-600 shrink-0">03/05</span>
+                            <span class="text-slate-700 truncate" title="Nghỉ bù 1/5">Nghỉ bù 1/5</span>
                           </div>
                         
                   </div>
@@ -1406,22 +1420,22 @@
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-07-24" title="24/07/2027 — Cuối tuần (Nhấp để chọn ngày du lịch)" class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-slate-100 text-slate-600 font-medium hover:bg-slate-200/70">
+                  <button type="button" data-action="select-day" data-date="2027-07-24" title="24/07/2027 — Cuối tuần trước dịp 27/7 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Cuối tuần trước lễ, dễ kết hợp nghỉ phép tạo kỳ nghỉ hè 4 ngày." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">24</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-07-25" title="25/07/2027 — Cuối tuần (Nhấp để chọn ngày du lịch)" class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-slate-100 text-slate-600 font-medium hover:bg-slate-200/70">
+                  <button type="button" data-action="select-day" data-date="2027-07-25" title="25/07/2027 — Cuối tuần trước dịp 27/7 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Cuối tuần liền kề trước lễ 27/7." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">25</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-07-26" title="26/07/2027 — Ngày thường (Nhấp để chọn ngày du lịch)" class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 text-slate-700 font-medium hover:bg-slate-100">
+                  <button type="button" data-action="select-day" data-date="2027-07-26" title="26/07/2027 — Ngày liền kề trước lễ 27/7 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Ngày kẹp Thứ Hai, dễ hoán đổi hoặc xin nghỉ phép nối liền cuối tuần 24–25/07." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">26</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-07-27" title="27/07/2027 — Ngày Tổ quốc tri ân (27/7) (Nghỉ lễ hưởng nguyên lương). Ngày Thương binh - Liệt sĩ, nghỉ hưởng nguyên lương từ 2027." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-07-27" title="27/07/2027 — Ngày Tổ quốc tri ân (27/7) (Chính lễ — Hưởng nguyên lương). Ngày Thương binh - Liệt sĩ, nghỉ hưởng nguyên lương từ 2027 (Thứ Ba)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">27</span>
                     
                   </button>
@@ -1643,22 +1657,22 @@
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-09-02" title="02/09/2027 — Ngày Quốc khánh (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (1/2)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-09-02" title="02/09/2027 — Ngày Quốc khánh (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (1/2)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">2</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-09-03" title="03/09/2027 — Nghỉ liền kề Quốc khánh (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (2/2)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-09-03" title="03/09/2027 — Nghỉ liền kề Quốc khánh (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (2/2)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">3</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-09-04" title="04/09/2027 — Cuối tuần dịp Quốc khánh (Vùng đệm đông đúc). Kỳ nghỉ 4 ngày liền mạch." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-09-04" title="04/09/2027 — Cuối tuần sau Quốc khánh (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Cuối tuần liền kề sau lễ tạo kỳ nghỉ 4 ngày." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">4</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-09-05" title="05/09/2027 — Cuối tuần dịp Quốc khánh (Vùng đệm đông đúc). Ngày cuối kỳ nghỉ Quốc khánh." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200">
+                  <button type="button" data-action="select-day" data-date="2027-09-05" title="05/09/2027 — Cuối tuần sau Quốc khánh (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Ngày cuối kỳ nghỉ Quốc khánh." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">5</span>
                     
                   </button>
@@ -2100,27 +2114,27 @@
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-11-24" title="24/11/2027 — Ngày Văn hóa Việt Nam (Nghỉ lễ hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (Thứ Tư)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
+                  <button type="button" data-action="select-day" data-date="2027-11-24" title="24/11/2027 — Ngày Văn hóa Việt Nam (Chính lễ — Hưởng nguyên lương). Ngày nghỉ lễ hưởng nguyên lương (Thứ Tư)." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700">
                     <span class="pointer-events-none">24</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-11-25" title="25/11/2027 — Ngày thường (Nhấp để chọn ngày du lịch)" class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 text-slate-700 font-medium hover:bg-slate-100">
+                  <button type="button" data-action="select-day" data-date="2027-11-25" title="25/11/2027 — Ngày liền kề sau lễ 24/11 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Ngày Thứ Năm liền kề sau lễ, dễ xin nghỉ phép nối dài tới cuối tuần." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">25</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-11-26" title="26/11/2027 — Ngày thường (Nhấp để chọn ngày du lịch)" class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 text-slate-700 font-medium hover:bg-slate-100">
+                  <button type="button" data-action="select-day" data-date="2027-11-26" title="26/11/2027 — Ngày liền kề sau lễ 24/11 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Ngày Thứ Sáu liền kề nối với cuối tuần 27–28/11." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">26</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-11-27" title="27/11/2027 — Cuối tuần (Nhấp để chọn ngày du lịch)" class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-slate-100 text-slate-600 font-medium hover:bg-slate-200/70">
+                  <button type="button" data-action="select-day" data-date="2027-11-27" title="27/11/2027 — Cuối tuần sau lễ 24/11 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Cuối tuần liền kề sau đợt lễ 24/11." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">27</span>
                     
                   </button>
                 
-                  <button type="button" data-action="select-day" data-date="2027-11-28" title="28/11/2027 — Cuối tuần (Nhấp để chọn ngày du lịch)" class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-slate-100 text-slate-600 font-medium hover:bg-slate-200/70">
+                  <button type="button" data-action="select-day" data-date="2027-11-28" title="28/11/2027 — Cuối tuần sau lễ 24/11 (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). Ngày cuối vùng đệm liền kề sau lễ 24/11." class="relative h-9 w-full rounded-lg text-xs flex flex-col items-center justify-center transition-all cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200">
                     <span class="pointer-events-none">28</span>
                     
                   </button>
@@ -2392,7 +2406,7 @@
                 </div>
 
                 <p class="text-xs sm:text-sm text-slate-600 flex-1 leading-relaxed">
-                  Nghỉ liên tục 7 ngày (28 tháng Chạp đến hết Mùng 5 Tết). Cao điểm du xuân, quá tải giao thông và lưu trú.
+                  Nghỉ liên tục 7 ngày (28 tháng Chạp đến hết Mùng 5 Tết, gồm 2 ngày nghỉ bù). Cao điểm du xuân, quá tải giao thông và lưu trú.
                 </p>
 
                 <div class="hidden lg:flex items-center text-slate-400 shrink-0">
@@ -2460,7 +2474,7 @@
                 </div>
 
                 <p class="text-xs sm:text-sm text-slate-600 flex-1 leading-relaxed">
-                  Nghỉ 4 ngày (từ Thứ Sáu 30/04 đến hết Thứ Hai 03/05 do nghỉ bù). Cao điểm đông đúc nhất mùa hè.
+                  Nghỉ 4 ngày (từ Thứ Sáu 30/04 đến hết Thứ Hai 03/05 do nghỉ bù 1/5). Cao điểm đông đúc nhất mùa hè.
                 </p>
 
                 <div class="hidden lg:flex items-center text-slate-400 shrink-0">
@@ -2477,24 +2491,24 @@
                     <span class="px-2 py-0.5 rounded-md bg-blue-100 text-blue-700 text-[10px] font-bold uppercase">Mới từ 2027</span>
                   </div>
                   <div class="flex flex-wrap items-center gap-2 mt-1 text-xs text-slate-500">
-                    <span class="font-semibold text-rose-600">27/07/2027</span>
+                    <span class="font-semibold text-rose-600">24/07 – 27/07/2027</span>
                     <span>•</span>
                     <span>1 ngày hưởng lương</span>
-                    
+                    <span>•</span><span class="font-medium text-amber-700">Nghỉ liền 4 ngày</span>
                   </div>
                 </div>
 
                 <div class="lg:w-36 shrink-0">
                   
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-800">
-                  <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-                  Đông cục bộ
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
+                  <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                  Đông đúc
                 </span>
               
                 </div>
 
                 <p class="text-xs sm:text-sm text-slate-600 flex-1 leading-relaxed">
-                  Ngày Thương binh - Liệt sĩ chính thức được nghỉ hưởng nguyên lương từ 2027. Rơi vào Thứ Ba, đông cục bộ tại các điểm di tích lịch sử hoặc nếu nối phép với cuối tuần 24–25/07.
+                  Ngày Thương binh - Liệt sĩ chính thức được nghỉ hưởng nguyên lương từ 2027 (Thứ Ba). Đã đánh dấu thêm vùng liền kề cuối tuần 24–25/07 và Thứ Hai 26/07 vì nhiều người dễ xin nghỉ phép/hoán đổi tạo kỳ nghỉ hè 4 ngày.
                 </p>
 
                 <div class="hidden lg:flex items-center text-slate-400 shrink-0">
@@ -2545,10 +2559,10 @@
                     
                   </div>
                   <div class="flex flex-wrap items-center gap-2 mt-1 text-xs text-slate-500">
-                    <span class="font-semibold text-rose-600">24/11/2027</span>
+                    <span class="font-semibold text-rose-600">24/11 – 28/11/2027</span>
                     <span>•</span>
                     <span>1 ngày hưởng lương</span>
-                    
+                    <span>•</span><span class="font-medium text-amber-700">Nghỉ liền 5 ngày</span>
                   </div>
                 </div>
 
@@ -2562,7 +2576,7 @@
                 </div>
 
                 <p class="text-xs sm:text-sm text-slate-600 flex-1 leading-relaxed">
-                  Rơi vào giữa tuần (Thứ Tư), không tạo kỳ nghỉ dài nên ít gây quá tải du lịch xa.
+                  Rơi vào giữa tuần (Thứ Tư). Đã đánh dấu thêm các ngày liền kề (25–26/11) nối đến cuối tuần sau đó (27–28/11) đề phòng khách xin nghỉ phép tạo kỳ nghỉ dài 5 ngày.
                 </p>
 
                 <div class="hidden lg:flex items-center text-slate-400 shrink-0">
@@ -2624,7 +2638,7 @@
             officialDays: 5,
             totalBreakDays: 7,
             crowdLevel: 'extreme',
-            advice: 'Nghỉ liên tục 7 ngày (28 tháng Chạp đến hết Mùng 5 Tết). Cao điểm du xuân, quá tải giao thông và lưu trú.',
+            advice: 'Nghỉ liên tục 7 ngày (28 tháng Chạp đến hết Mùng 5 Tết, gồm 2 ngày nghỉ bù). Cao điểm du xuân, quá tải giao thông và lưu trú.',
           },
           {
             id: '2027-hung-kings',
@@ -2650,20 +2664,20 @@
             officialDays: 2,
             totalBreakDays: 4,
             crowdLevel: 'extreme',
-            advice: 'Nghỉ 4 ngày (từ Thứ Sáu 30/04 đến hết Thứ Hai 03/05 do nghỉ bù). Cao điểm đông đúc nhất mùa hè.',
+            advice: 'Nghỉ 4 ngày (từ Thứ Sáu 30/04 đến hết Thứ Hai 03/05 do nghỉ bù 1/5). Cao điểm đông đúc nhất mùa hè.',
           },
           {
             id: '2027-gratitude-day',
             year: 2027,
             name: 'Ngày Tổ quốc tri ân (27/7)',
-            dateRangeLabel: '27/07',
-            startDate: '2027-07-27',
+            dateRangeLabel: '24/07 – 27/07',
+            startDate: '2027-07-24',
             endDate: '2027-07-27',
             monthIndex: 6,
             officialDays: 1,
-            totalBreakDays: 1,
-            crowdLevel: 'moderate',
-            advice: 'Ngày Thương binh - Liệt sĩ chính thức được nghỉ hưởng nguyên lương từ 2027. Rơi vào Thứ Ba, đông cục bộ tại các điểm di tích lịch sử hoặc nếu nối phép với cuối tuần 24–25/07.',
+            totalBreakDays: 4,
+            crowdLevel: 'high',
+            advice: 'Ngày Thương binh - Liệt sĩ chính thức được nghỉ hưởng nguyên lương từ 2027 (Thứ Ba). Đã đánh dấu thêm vùng liền kề cuối tuần 24–25/07 và Thứ Hai 26/07 vì nhiều người dễ xin nghỉ phép/hoán đổi tạo kỳ nghỉ hè 4 ngày.',
             newLawBadge: 'Mới từ 2027',
           },
           {
@@ -2683,14 +2697,14 @@
             id: '2027-culture-day',
             year: 2027,
             name: 'Ngày Văn hóa Việt Nam',
-            dateRangeLabel: '24/11',
+            dateRangeLabel: '24/11 – 28/11',
             startDate: '2027-11-24',
-            endDate: '2027-11-24',
+            endDate: '2027-11-28',
             monthIndex: 10,
             officialDays: 1,
-            totalBreakDays: 1,
+            totalBreakDays: 5,
             crowdLevel: 'moderate',
-            advice: 'Rơi vào giữa tuần (Thứ Tư), không tạo kỳ nghỉ dài nên ít gây quá tải du lịch xa.',
+            advice: 'Rơi vào giữa tuần (Thứ Tư). Đã đánh dấu thêm các ngày liền kề (25–26/11) nối đến cuối tuần sau đó (27–28/11) đề phòng khách xin nghỉ phép tạo kỳ nghỉ dài 5 ngày.',
           },
         ],
         2028: [
@@ -2711,27 +2725,27 @@
             id: '2028-tet',
             year: 2028,
             name: 'Tết Nguyên đán Mậu Thân',
-            dateRangeLabel: '25/01 – 31/01',
-            startDate: '2028-01-25',
+            dateRangeLabel: '22/01 – 31/01',
+            startDate: '2028-01-22',
             endDate: '2028-01-31',
             monthIndex: 0,
             officialDays: 5,
-            totalBreakDays: 7,
+            totalBreakDays: 10,
             crowdLevel: 'extreme',
-            advice: 'Mùng 1 rơi vào 26/01/2028. Kỳ nghỉ tối thiểu 7 ngày (có thể mở rộng từ 22/01). Cực kỳ đông đúc trên cả nước.',
+            advice: 'Mùng 1 rơi vào 26/01/2028. Kỳ nghỉ chính thức + nghỉ bù 7 ngày (25/01–31/01), cộng thêm vùng liền kề Thứ Hai 24/01 nối với cuối tuần trước đó (22–23/01). Cực kỳ đông đúc trên cả nước.',
           },
           {
             id: '2028-hung-kings',
             year: 2028,
             name: 'Giỗ Tổ Hùng Vương (10/3 ÂL)',
-            dateRangeLabel: '04/04',
-            startDate: '2028-04-04',
+            dateRangeLabel: '01/04 – 04/04',
+            startDate: '2028-04-01',
             endDate: '2028-04-04',
             monthIndex: 3,
             officialDays: 1,
-            totalBreakDays: 1,
-            crowdLevel: 'moderate',
-            advice: 'Rơi vào Thứ Ba. Mức độ đông đúc vừa phải trừ trường hợp khách xin nghỉ phép ngày Thứ Hai 03/04.',
+            totalBreakDays: 4,
+            crowdLevel: 'high',
+            advice: 'Rơi vào Thứ Ba. Đã đánh dấu thêm Thứ Hai 03/04 liền kề với cuối tuần trước đó (01–02/04) vì nhiều người dễ xin nghỉ phép tạo kỳ nghỉ 4 ngày.',
           },
           {
             id: '2028-reunification',
@@ -2744,20 +2758,20 @@
             officialDays: 2,
             totalBreakDays: 4,
             crowdLevel: 'extreme',
-            advice: 'Nghỉ 4 ngày (30/4 rơi vào Chủ Nhật nên nghỉ bù Thứ Ba 02/05). Nên tránh đi biển và các điểm du lịch hot.',
+            advice: 'Nghỉ 4 ngày (30/4 rơi vào Chủ Nhật nên nghỉ bù Thứ Ba 02/05). Nên tránh đi biển và các điểm du lịch nổi tiếng.',
           },
           {
             id: '2028-gratitude-day',
             year: 2028,
             name: 'Ngày Tổ quốc tri ân (27/7)',
-            dateRangeLabel: '27/07',
+            dateRangeLabel: '27/07 – 30/07',
             startDate: '2028-07-27',
-            endDate: '2028-07-27',
+            endDate: '2028-07-30',
             monthIndex: 6,
             officialDays: 1,
-            totalBreakDays: 1,
-            crowdLevel: 'moderate',
-            advice: 'Rơi vào Thứ Năm. Cẩn thận cuối tuần 28–30/07 vì nhiều người có thể xin nghỉ phép Thứ Sáu để đi du lịch hè.',
+            totalBreakDays: 4,
+            crowdLevel: 'high',
+            advice: 'Rơi vào Thứ Năm. Đã đánh dấu thêm Thứ Sáu 28/07 nối liền cuối tuần 29–30/07 vì nhiều người dễ xin nghỉ phép tạo kỳ nghỉ hè 4 ngày.',
           },
           {
             id: '2028-national-day',
@@ -2770,7 +2784,7 @@
             officialDays: 2,
             totalBreakDays: 4,
             crowdLevel: 'extreme',
-            advice: 'Dự kiến nghỉ 4 ngày liên tiếp (bao gồm nghỉ bù Thứ Hai 04/09). Đông đúc trên diện rộng.',
+            advice: 'Nghỉ 4 ngày liên tiếp (2/9 rơi vào Thứ Bảy nên nghỉ bù Thứ Hai 04/09). Đông đúc trên diện rộng.',
           },
           {
             id: '2028-culture-day',
@@ -2783,7 +2797,7 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Sáu, tạo kỳ nghỉ cuối tuần 3 ngày đẹp trời cuối thu! Các điểm như Đà Lạt, Hà Giang sẽ rất đông.',
+            advice: 'Rơi vào Thứ Sáu, nối liền cuối tuần tạo kỳ nghỉ 3 ngày đẹp trời cuối thu. Các điểm như Đà Lạt, Hà Giang sẽ rất đông.',
           },
         ],
         2029: [
@@ -2798,7 +2812,7 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Hai, nối liền cuối tuần 30–31/12/2028 tạo thành kỳ nghỉ 3 ngày đầu năm đông khách tại các điểm du lịch nghỉ dưỡng.',
+            advice: 'Rơi vào Thứ Hai, nối liền cuối tuần 30–31/12/2028 tạo kỳ nghỉ 3 ngày đầu năm. Cao điểm du lịch đón năm mới.',
           },
           {
             id: '2029-tet',
@@ -2811,7 +2825,7 @@
             officialDays: 5,
             totalBreakDays: 9,
             crowdLevel: 'extreme',
-            advice: 'Mùng 1 rơi vào Thứ Ba (13/02). 5 ngày nghỉ chính thức nằm gọn từ Thứ Hai đến Thứ Sáu, nối liền 2 dịp cuối tuần tạo kỳ nghỉ dài 9 ngày cực kỳ đông đúc.',
+            advice: '5 ngày nghỉ chính thức rơi trọn từ Thứ Hai đến Thứ Sáu, kẹp giữa 2 cuối tuần tạo kỳ nghỉ Tết dài 9 ngày. Nên tránh du lịch hoàn toàn.',
           },
           {
             id: '2029-hung-kings',
@@ -2824,7 +2838,7 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Hai, tạo kỳ nghỉ 3 ngày liền mạch ngay trước dịp 30/4. Nên tránh các điểm du lịch gần và nổi tiếng.',
+            advice: 'Rơi vào Thứ Hai, nối liền cuối tuần tạo kỳ nghỉ 3 ngày — sát ngay trước đợt 30/4 nên cuối tháng 4 cực kỳ đông đúc.',
           },
           {
             id: '2029-reunification',
@@ -2837,7 +2851,7 @@
             officialDays: 2,
             totalBreakDays: 4,
             crowdLevel: 'extreme',
-            advice: 'Nghỉ liền 4 ngày từ Thứ Bảy (28/04) đến hết Thứ Ba (01/05). Cao điểm du lịch biển và nghỉ dưỡng lớn nhất đầu hè.',
+            advice: 'Rơi vào Thứ Hai và Thứ Ba, nối liền cuối tuần 28–29/04 tạo kỳ nghỉ 4 ngày. Lưu ý tuần giữa Giỗ Tổ và 30/4 rất đông khách.',
           },
           {
             id: '2029-gratitude-day',
@@ -2850,7 +2864,7 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Sáu, nối liền 2 ngày cuối tuần giữa mùa du lịch hè! Các thành phố biển và khu du lịch sẽ đông hơn cuối tuần thường rất nhiều.',
+            advice: 'Rơi vào Thứ Sáu, nối liền cuối tuần giữa cao điểm du lịch hè tạo kỳ nghỉ 3 ngày. Nên né các bãi biển nổi tiếng.',
           },
           {
             id: '2029-national-day',
@@ -2863,7 +2877,7 @@
             officialDays: 2,
             totalBreakDays: 4,
             crowdLevel: 'extreme',
-            advice: 'Dự kiến nghỉ 4 ngày liên tục (bao gồm nghỉ bù Thứ Ba 04/09 do 2/9 rơi vào Chủ Nhật). Rất đông trên cả nước.',
+            advice: '2/9 rơi vào Chủ Nhật, dự kiến nghỉ bù Thứ Ba 04/09 tạo kỳ nghỉ 4 ngày liên tục. Cao điểm du lịch mùa thu.',
           },
           {
             id: '2029-culture-day',
@@ -2876,7 +2890,7 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Bảy nên được nghỉ bù Thứ Hai (26/11), tạo kỳ nghỉ 3 ngày cuối thu. Các điểm săn hoa dã quỳ, mây núi rất đông khách.',
+            advice: 'Rơi vào Thứ Bảy, nghỉ bù Thứ Hai 26/11 tạo kỳ nghỉ 3 ngày cuối thu. Các điểm săn mây và cao nguyên sẽ đông khách.',
           },
         ],
         2030: [
@@ -2891,7 +2905,7 @@
             officialDays: 1,
             totalBreakDays: 1,
             crowdLevel: 'moderate',
-            advice: 'Rơi vào Thứ Ba. Không quá đông nếu đi xa, nhưng cần lưu ý khả năng hoán đổi hoặc người dân xin nghỉ phép Thứ Hai (31/12/2029) để nối dài kỳ nghỉ 4 ngày.',
+            advice: 'Rơi vào Thứ Ba. Cần lưu ý ngày Thứ Hai 31/12/2029 có thể được hoán đổi hoặc xin nghỉ phép nối với cuối tuần trước đó.',
           },
           {
             id: '2030-tet',
@@ -2904,7 +2918,7 @@
             officialDays: 5,
             totalBreakDays: 7,
             crowdLevel: 'extreme',
-            advice: 'Mùng 1 rơi vào Thứ Bảy (02/02). Dự kiến nghỉ liên tục 7 ngày (gồm 2 ngày nghỉ bù Thứ Ba và Thứ Tư). Cực kỳ đông đúc, giá vé và lưu trú ở mức đỉnh.',
+            advice: 'Mùng 1 rơi vào Thứ Bảy 02/02/2030 nên có 2 ngày nghỉ bù (05–06/02), tạo kỳ nghỉ liên tục 7 ngày. Rất đông đúc trên cả nước.',
           },
           {
             id: '2030-hung-kings',
@@ -2917,20 +2931,20 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Sáu, tạo kỳ nghỉ 3 ngày cuối tuần lý tưởng cho các chuyến đi ngắn ngày nên các điểm hot sẽ nhanh kín phòng.',
+            advice: 'Rơi vào Thứ Sáu, tạo kỳ nghỉ 3 ngày cuối tuần. Nên né các điểm nghỉ dưỡng ngắn ngày quanh thành phố lớn.',
           },
           {
             id: '2030-reunification',
             year: 2030,
             name: '30/4 & Quốc tế Lao động 1/5',
-            dateRangeLabel: '30/04 – 01/05',
-            startDate: '2030-04-30',
+            dateRangeLabel: '27/04 – 01/05',
+            startDate: '2030-04-27',
             endDate: '2030-05-01',
             monthIndex: 3,
             officialDays: 2,
-            totalBreakDays: 2,
-            crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Ba và Thứ Tư. Tuy nhiên Thứ Hai (29/04) rất dễ được hoán đổi hoặc xin nghỉ phép nối liền cuối tuần 27–28/04 thành kỳ nghỉ 5 ngày đông đúc.',
+            totalBreakDays: 5,
+            crowdLevel: 'extreme',
+            advice: 'Rơi vào Thứ Ba và Thứ Tư. Đã đánh dấu thêm Thứ Hai (29/04) liền kề nối với cuối tuần trước đó (27–28/04) vì rất dễ được hoán đổi hoặc xin nghỉ phép tạo kỳ nghỉ 5 ngày đông đúc.',
           },
           {
             id: '2030-gratitude-day',
@@ -2943,7 +2957,7 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Thứ Bảy, nghỉ bù Thứ Hai (29/07) tạo thành kỳ nghỉ 3 ngày giữa cao điểm du lịch hè. Nên tránh các bãi biển nổi tiếng.',
+            advice: 'Rơi vào Thứ Bảy, nghỉ bù Thứ Hai 29/07 tạo kỳ nghỉ 3 ngày giữa mùa du lịch hè. Rất đông ở các khu du lịch biển.',
           },
           {
             id: '2030-national-day',
@@ -2956,7 +2970,7 @@
             officialDays: 2,
             totalBreakDays: 4,
             crowdLevel: 'extreme',
-            advice: 'Dự kiến nghỉ liền 4 ngày từ Thứ Bảy (31/08) đến hết Thứ Ba (03/09). Cao điểm du lịch toàn quốc, nên dời chuyến đi sang tuần thứ 2 của tháng 9.',
+            advice: 'Rơi vào Thứ Hai và Thứ Ba, nối liền cuối tuần 31/08–01/09 tạo kỳ nghỉ 4 ngày liên tiếp. Cao điểm du lịch toàn quốc.',
           },
           {
             id: '2030-culture-day',
@@ -2969,62 +2983,78 @@
             officialDays: 1,
             totalBreakDays: 3,
             crowdLevel: 'high',
-            advice: 'Rơi vào Chủ Nhật, nghỉ bù Thứ Hai (25/11) tạo thành kỳ nghỉ cuối tuần 3 ngày. Nên tránh các điểm du lịch mùa thu – đông nổi tiếng.',
+            advice: 'Rơi vào Chủ Nhật, nghỉ bù Thứ Hai 25/11 tạo kỳ nghỉ 3 ngày cuối thu. Các điểm du lịch thời tiết đẹp sẽ đông khách.',
           },
         ],
       };
 
-      // Chi tiết từng ngày lễ chính thức (official) và ngày nghỉ bù / cuối tuần liền kề (bridge)
+      // Chi tiết từng ngày chính lễ (official), ngày nghỉ bù (compensatory) và ngày liền kề/cuối tuần kề lễ (bridge)
       const HOLIDAY_ENTRIES_BY_YEAR = {
         2027: [
           { date: '2027-01-01', name: 'Tết Dương lịch', category: 'official', periodId: '2027-new-year', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Sáu).' },
-          { date: '2027-01-02', name: 'Cuối tuần Tết Dương lịch', category: 'bridge', periodId: '2027-new-year', note: 'Kỳ nghỉ 3 ngày đầu năm.' },
-          { date: '2027-01-03', name: 'Cuối tuần Tết Dương lịch', category: 'bridge', periodId: '2027-new-year', note: 'Ngày cuối kỳ nghỉ Tết Dương lịch.' },
+          { date: '2027-01-02', name: 'Cuối tuần sau Tết Dương lịch', category: 'bridge', periodId: '2027-new-year', note: 'Cuối tuần liền kề sau lễ tạo kỳ nghỉ 3 ngày đầu năm.' },
+          { date: '2027-01-03', name: 'Cuối tuần sau Tết Dương lịch', category: 'bridge', periodId: '2027-new-year', note: 'Ngày cuối kỳ nghỉ Tết Dương lịch.' },
           { date: '2027-02-04', name: 'Tết Nguyên đán (28 Tết)', category: 'official', periodId: '2027-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (1/5).' },
           { date: '2027-02-05', name: 'Tết Nguyên đán (29 Tết)', category: 'official', periodId: '2027-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (2/5).' },
           { date: '2027-02-06', name: 'Mùng 1 Tết Đinh Mùi', category: 'official', periodId: '2027-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (3/5).' },
           { date: '2027-02-07', name: 'Mùng 2 Tết Đinh Mùi', category: 'official', periodId: '2027-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (4/5).' },
           { date: '2027-02-08', name: 'Mùng 3 Tết Đinh Mùi', category: 'official', periodId: '2027-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (5/5).' },
-          { date: '2027-02-09', name: 'Mùng 4 Tết (Nghỉ bù)', category: 'bridge', periodId: '2027-tet', note: 'Nghỉ bù do Mùng 1–2 trùng cuối tuần.' },
-          { date: '2027-02-10', name: 'Mùng 5 Tết (Nghỉ bù)', category: 'bridge', periodId: '2027-tet', note: 'Ngày cuối kỳ nghỉ Tết 7 ngày.' },
+          { date: '2027-02-09', name: 'Mùng 4 Tết (Nghỉ bù)', category: 'compensatory', periodId: '2027-tet', note: 'Ngày nghỉ bù hưởng nguyên lương do Mùng 1 trùng Thứ Bảy.' },
+          { date: '2027-02-10', name: 'Mùng 5 Tết (Nghỉ bù)', category: 'compensatory', periodId: '2027-tet', note: 'Ngày nghỉ bù hưởng nguyên lương do Mùng 2 trùng Chủ Nhật.' },
           { date: '2027-04-16', name: 'Giỗ Tổ Hùng Vương', category: 'official', periodId: '2027-hung-kings', note: 'Mùng 10/3 Âm lịch (Thứ Sáu) — Hưởng nguyên lương.' },
-          { date: '2027-04-17', name: 'Cuối tuần dịp Giỗ Tổ', category: 'bridge', periodId: '2027-hung-kings', note: 'Kỳ nghỉ 3 ngày cuối tuần.' },
-          { date: '2027-04-18', name: 'Cuối tuần dịp Giỗ Tổ', category: 'bridge', periodId: '2027-hung-kings', note: 'Ngày cuối kỳ nghỉ Giỗ Tổ.' },
+          { date: '2027-04-17', name: 'Cuối tuần sau dịp Giỗ Tổ', category: 'bridge', periodId: '2027-hung-kings', note: 'Cuối tuần liền kề sau lễ tạo kỳ nghỉ 3 ngày.' },
+          { date: '2027-04-18', name: 'Cuối tuần sau dịp Giỗ Tổ', category: 'bridge', periodId: '2027-hung-kings', note: 'Ngày cuối kỳ nghỉ Giỗ Tổ.' },
           { date: '2027-04-30', name: 'Ngày Giải phóng miền Nam', category: 'official', periodId: '2027-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương.' },
           { date: '2027-05-01', name: 'Ngày Quốc tế Lao động', category: 'official', periodId: '2027-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Bảy).' },
-          { date: '2027-05-02', name: 'Cuối tuần dịp 30/4 – 1/5', category: 'bridge', periodId: '2027-reunification', note: 'Cao điểm du lịch lễ 4 ngày.' },
-          { date: '2027-05-03', name: 'Nghỉ bù 1/5', category: 'bridge', periodId: '2027-reunification', note: 'Nghỉ bù Thứ Hai do 1/5 rơi vào Thứ Bảy.' },
-          { date: '2027-07-27', name: 'Ngày Tổ quốc tri ân (27/7)', category: 'official', periodId: '2027-gratitude-day', note: 'Ngày Thương binh - Liệt sĩ, nghỉ hưởng nguyên lương từ 2027.' },
+          { date: '2027-05-02', name: 'Cuối tuần dịp 30/4 – 1/5', category: 'bridge', periodId: '2027-reunification', note: 'Cuối tuần nằm trong chuỗi cao điểm du lịch lễ 4 ngày.' },
+          { date: '2027-05-03', name: 'Nghỉ bù 1/5', category: 'compensatory', periodId: '2027-reunification', note: 'Ngày nghỉ bù Thứ Hai hưởng nguyên lương do 1/5 rơi vào Thứ Bảy.' },
+          { date: '2027-07-24', name: 'Cuối tuần trước dịp 27/7', category: 'bridge', periodId: '2027-gratitude-day', note: 'Cuối tuần trước lễ, dễ kết hợp nghỉ phép tạo kỳ nghỉ hè 4 ngày.' },
+          { date: '2027-07-25', name: 'Cuối tuần trước dịp 27/7', category: 'bridge', periodId: '2027-gratitude-day', note: 'Cuối tuần liền kề trước lễ 27/7.' },
+          { date: '2027-07-26', name: 'Ngày liền kề trước lễ 27/7', category: 'bridge', periodId: '2027-gratitude-day', note: 'Ngày kẹp Thứ Hai, dễ hoán đổi hoặc xin nghỉ phép nối liền cuối tuần 24–25/07.' },
+          { date: '2027-07-27', name: 'Ngày Tổ quốc tri ân (27/7)', category: 'official', periodId: '2027-gratitude-day', note: 'Ngày Thương binh - Liệt sĩ, nghỉ hưởng nguyên lương từ 2027 (Thứ Ba).' },
           { date: '2027-09-02', name: 'Ngày Quốc khánh', category: 'official', periodId: '2027-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (1/2).' },
           { date: '2027-09-03', name: 'Nghỉ liền kề Quốc khánh', category: 'official', periodId: '2027-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (2/2).' },
-          { date: '2027-09-04', name: 'Cuối tuần dịp Quốc khánh', category: 'bridge', periodId: '2027-national-day', note: 'Kỳ nghỉ 4 ngày liền mạch.' },
-          { date: '2027-09-05', name: 'Cuối tuần dịp Quốc khánh', category: 'bridge', periodId: '2027-national-day', note: 'Ngày cuối kỳ nghỉ Quốc khánh.' },
+          { date: '2027-09-04', name: 'Cuối tuần sau Quốc khánh', category: 'bridge', periodId: '2027-national-day', note: 'Cuối tuần liền kề sau lễ tạo kỳ nghỉ 4 ngày.' },
+          { date: '2027-09-05', name: 'Cuối tuần sau Quốc khánh', category: 'bridge', periodId: '2027-national-day', note: 'Ngày cuối kỳ nghỉ Quốc khánh.' },
           { date: '2027-11-24', name: 'Ngày Văn hóa Việt Nam', category: 'official', periodId: '2027-culture-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Tư).' },
+          { date: '2027-11-25', name: 'Ngày liền kề sau lễ 24/11', category: 'bridge', periodId: '2027-culture-day', note: 'Ngày Thứ Năm liền kề sau lễ, dễ xin nghỉ phép nối dài tới cuối tuần.' },
+          { date: '2027-11-26', name: 'Ngày liền kề sau lễ 24/11', category: 'bridge', periodId: '2027-culture-day', note: 'Ngày Thứ Sáu liền kề nối với cuối tuần 27–28/11.' },
+          { date: '2027-11-27', name: 'Cuối tuần sau lễ 24/11', category: 'bridge', periodId: '2027-culture-day', note: 'Cuối tuần liền kề sau đợt lễ 24/11.' },
+          { date: '2027-11-28', name: 'Cuối tuần sau lễ 24/11', category: 'bridge', periodId: '2027-culture-day', note: 'Ngày cuối vùng đệm liền kề sau lễ 24/11.' },
         ],
         2028: [
           { date: '2028-01-01', name: 'Tết Dương lịch', category: 'official', periodId: '2028-new-year', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Bảy).' },
-          { date: '2028-01-02', name: 'Cuối tuần Tết Dương lịch', category: 'bridge', periodId: '2028-new-year', note: 'Kỳ nghỉ 3 ngày đầu năm.' },
-          { date: '2028-01-03', name: 'Nghỉ bù Tết Dương lịch', category: 'bridge', periodId: '2028-new-year', note: 'Nghỉ bù Thứ Hai do 01/01 rơi vào Thứ Bảy.' },
+          { date: '2028-01-02', name: 'Cuối tuần Tết Dương lịch', category: 'bridge', periodId: '2028-new-year', note: 'Cuối tuần liền kề tạo kỳ nghỉ 3 ngày đầu năm.' },
+          { date: '2028-01-03', name: 'Nghỉ bù Tết Dương lịch', category: 'compensatory', periodId: '2028-new-year', note: 'Ngày nghỉ bù Thứ Hai hưởng nguyên lương do 01/01 rơi vào Thứ Bảy.' },
+          { date: '2028-01-22', name: 'Cuối tuần trước Tết', category: 'bridge', periodId: '2028-tet', note: 'Cuối tuần liền kề trước Tết, cao điểm mua sắm và di chuyển sớm.' },
+          { date: '2028-01-23', name: 'Cuối tuần trước Tết', category: 'bridge', periodId: '2028-tet', note: 'Cuối tuần liền kề trước Tết.' },
+          { date: '2028-01-24', name: 'Ngày liền kề trước Tết (29 Tết)', category: 'bridge', periodId: '2028-tet', note: 'Ngày kẹp Thứ Hai nối cuối tuần 22–23/01 với kỳ nghỉ Tết.' },
           { date: '2028-01-25', name: 'Tết Nguyên đán (30 Tết)', category: 'official', periodId: '2028-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (1/5).' },
           { date: '2028-01-26', name: 'Mùng 1 Tết Mậu Thân', category: 'official', periodId: '2028-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (2/5).' },
           { date: '2028-01-27', name: 'Mùng 2 Tết Mậu Thân', category: 'official', periodId: '2028-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (3/5).' },
           { date: '2028-01-28', name: 'Mùng 3 Tết Mậu Thân', category: 'official', periodId: '2028-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (4/5).' },
           { date: '2028-01-29', name: 'Mùng 4 Tết Mậu Thân', category: 'official', periodId: '2028-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (5/5).' },
-          { date: '2028-01-30', name: 'Mùng 5 Tết (Cuối tuần)', category: 'bridge', periodId: '2028-tet', note: 'Cao điểm du lịch đầu xuân.' },
-          { date: '2028-01-31', name: 'Mùng 6 Tết (Nghỉ bù)', category: 'bridge', periodId: '2028-tet', note: 'Dự kiến nghỉ bù Thứ Hai do Mùng 4 rơi vào Thứ Bảy.' },
+          { date: '2028-01-30', name: 'Mùng 5 Tết (Cuối tuần)', category: 'bridge', periodId: '2028-tet', note: 'Cuối tuần liền kề, cao điểm du lịch đầu xuân.' },
+          { date: '2028-01-31', name: 'Mùng 6 Tết (Nghỉ bù)', category: 'compensatory', periodId: '2028-tet', note: 'Dự kiến ngày nghỉ bù Thứ Hai hưởng nguyên lương do Mùng 4 rơi vào Thứ Bảy.' },
+          { date: '2028-04-01', name: 'Cuối tuần trước dịp Giỗ Tổ', category: 'bridge', periodId: '2028-hung-kings', note: 'Cuối tuần liền kề trước lễ Giỗ Tổ.' },
+          { date: '2028-04-02', name: 'Cuối tuần trước dịp Giỗ Tổ', category: 'bridge', periodId: '2028-hung-kings', note: 'Cuối tuần liền kề trước lễ Giỗ Tổ.' },
+          { date: '2028-04-03', name: 'Ngày liền kề trước Giỗ Tổ', category: 'bridge', periodId: '2028-hung-kings', note: 'Ngày kẹp Thứ Hai nối cuối tuần 01–02/04 với Giỗ Tổ (Thứ Ba).' },
           { date: '2028-04-04', name: 'Giỗ Tổ Hùng Vương', category: 'official', periodId: '2028-hung-kings', note: 'Mùng 10/3 Âm lịch (Thứ Ba) — Hưởng nguyên lương.' },
-          { date: '2028-04-29', name: 'Cuối tuần dịp 30/4 – 1/5', category: 'bridge', periodId: '2028-reunification', note: 'Bắt đầu kỳ nghỉ 4 ngày.' },
+          { date: '2028-04-29', name: 'Cuối tuần trước dịp 30/4 – 1/5', category: 'bridge', periodId: '2028-reunification', note: 'Bắt đầu kỳ nghỉ 4 ngày.' },
           { date: '2028-04-30', name: 'Ngày Giải phóng miền Nam', category: 'official', periodId: '2028-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương (Chủ Nhật).' },
           { date: '2028-05-01', name: 'Ngày Quốc tế Lao động', category: 'official', periodId: '2028-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương.' },
-          { date: '2028-05-02', name: 'Nghỉ bù 30/4', category: 'bridge', periodId: '2028-reunification', note: 'Nghỉ bù Thứ Ba do 30/4 rơi vào Chủ Nhật.' },
+          { date: '2028-05-02', name: 'Nghỉ bù 30/4', category: 'compensatory', periodId: '2028-reunification', note: 'Ngày nghỉ bù Thứ Ba hưởng nguyên lương do 30/4 rơi vào Chủ Nhật.' },
           { date: '2028-07-27', name: 'Ngày Tổ quốc tri ân (27/7)', category: 'official', periodId: '2028-gratitude-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Năm).' },
+          { date: '2028-07-28', name: 'Ngày liền kề sau lễ 27/7', category: 'bridge', periodId: '2028-gratitude-day', note: 'Ngày kẹp Thứ Sáu, dễ hoán đổi hoặc xin nghỉ phép nối liền cuối tuần 29–30/07.' },
+          { date: '2028-07-29', name: 'Cuối tuần sau dịp 27/7', category: 'bridge', periodId: '2028-gratitude-day', note: 'Cuối tuần nối dài kỳ nghỉ hè dịp 27/7.' },
+          { date: '2028-07-30', name: 'Cuối tuần sau dịp 27/7', category: 'bridge', periodId: '2028-gratitude-day', note: 'Ngày cuối vùng đệm đông đúc dịp 27/7.' },
           { date: '2028-09-01', name: 'Nghỉ liền kề Quốc khánh', category: 'official', periodId: '2028-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (1/2).' },
           { date: '2028-09-02', name: 'Ngày Quốc khánh', category: 'official', periodId: '2028-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (2/2, Thứ Bảy).' },
           { date: '2028-09-03', name: 'Cuối tuần dịp Quốc khánh', category: 'bridge', periodId: '2028-national-day', note: 'Cao điểm du lịch Quốc khánh.' },
-          { date: '2028-09-04', name: 'Nghỉ bù Quốc khánh', category: 'bridge', periodId: '2028-national-day', note: 'Nghỉ bù Thứ Hai do 2/9 rơi vào Thứ Bảy.' },
+          { date: '2028-09-04', name: 'Nghỉ bù Quốc khánh', category: 'compensatory', periodId: '2028-national-day', note: 'Ngày nghỉ bù Thứ Hai hưởng nguyên lương do 2/9 rơi vào Thứ Bảy.' },
           { date: '2028-11-24', name: 'Ngày Văn hóa Việt Nam', category: 'official', periodId: '2028-culture-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Sáu).' },
-          { date: '2028-11-25', name: 'Cuối tuần Ngày Văn hóa', category: 'bridge', periodId: '2028-culture-day', note: 'Kỳ nghỉ 3 ngày cuối tuần.' },
-          { date: '2028-11-26', name: 'Cuối tuần Ngày Văn hóa', category: 'bridge', periodId: '2028-culture-day', note: 'Ngày cuối kỳ nghỉ 3 ngày.' },
+          { date: '2028-11-25', name: 'Cuối tuần sau Ngày Văn hóa', category: 'bridge', periodId: '2028-culture-day', note: 'Cuối tuần liền kề tạo kỳ nghỉ 3 ngày.' },
+          { date: '2028-11-26', name: 'Cuối tuần sau Ngày Văn hóa', category: 'bridge', periodId: '2028-culture-day', note: 'Ngày cuối kỳ nghỉ 3 ngày.' },
         ],
         2029: [
           { date: '2029-01-01', name: 'Tết Dương lịch', category: 'official', periodId: '2029-new-year', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Hai, nối liền cuối tuần 30–31/12/2028).' },
@@ -3035,25 +3065,25 @@
           { date: '2029-02-14', name: 'Mùng 2 Tết Kỷ Dậu', category: 'official', periodId: '2029-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (3/5).' },
           { date: '2029-02-15', name: 'Mùng 3 Tết Kỷ Dậu', category: 'official', periodId: '2029-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (4/5).' },
           { date: '2029-02-16', name: 'Mùng 4 Tết Kỷ Dậu', category: 'official', periodId: '2029-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (5/5).' },
-          { date: '2029-02-17', name: 'Mùng 5 Tết (Cuối tuần)', category: 'bridge', periodId: '2029-tet', note: 'Cao điểm du lịch đầu xuân.' },
+          { date: '2029-02-17', name: 'Mùng 5 Tết (Cuối tuần)', category: 'bridge', periodId: '2029-tet', note: 'Cuối tuần sau Tết, cao điểm du lịch đầu xuân.' },
           { date: '2029-02-18', name: 'Mùng 6 Tết (Cuối tuần)', category: 'bridge', periodId: '2029-tet', note: 'Ngày cuối kỳ nghỉ Tết 9 ngày, cao điểm giao thông.' },
-          { date: '2029-04-21', name: 'Cuối tuần dịp Giỗ Tổ', category: 'bridge', periodId: '2029-hung-kings', note: 'Bắt đầu kỳ nghỉ 3 ngày dịp Giỗ Tổ.' },
-          { date: '2029-04-22', name: 'Cuối tuần dịp Giỗ Tổ', category: 'bridge', periodId: '2029-hung-kings', note: 'Kỳ nghỉ 3 ngày cuối tuần.' },
+          { date: '2029-04-21', name: 'Cuối tuần trước dịp Giỗ Tổ', category: 'bridge', periodId: '2029-hung-kings', note: 'Bắt đầu kỳ nghỉ 3 ngày dịp Giỗ Tổ.' },
+          { date: '2029-04-22', name: 'Cuối tuần trước dịp Giỗ Tổ', category: 'bridge', periodId: '2029-hung-kings', note: 'Cuối tuần liền kề trước lễ Giỗ Tổ.' },
           { date: '2029-04-23', name: 'Giỗ Tổ Hùng Vương', category: 'official', periodId: '2029-hung-kings', note: 'Mùng 10/3 Âm lịch (Thứ Hai) — Hưởng nguyên lương.' },
-          { date: '2029-04-28', name: 'Cuối tuần dịp 30/4 – 1/5', category: 'bridge', periodId: '2029-reunification', note: 'Bắt đầu kỳ nghỉ 4 ngày.' },
-          { date: '2029-04-29', name: 'Cuối tuần dịp 30/4 – 1/5', category: 'bridge', periodId: '2029-reunification', note: 'Cao điểm du lịch lễ.' },
+          { date: '2029-04-28', name: 'Cuối tuần trước dịp 30/4 – 1/5', category: 'bridge', periodId: '2029-reunification', note: 'Bắt đầu kỳ nghỉ 4 ngày.' },
+          { date: '2029-04-29', name: 'Cuối tuần trước dịp 30/4 – 1/5', category: 'bridge', periodId: '2029-reunification', note: 'Cao điểm du lịch lễ.' },
           { date: '2029-04-30', name: 'Ngày Giải phóng miền Nam', category: 'official', periodId: '2029-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Hai).' },
           { date: '2029-05-01', name: 'Ngày Quốc tế Lao động', category: 'official', periodId: '2029-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Ba).' },
           { date: '2029-07-27', name: 'Ngày Tổ quốc tri ân (27/7)', category: 'official', periodId: '2029-gratitude-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Sáu).' },
-          { date: '2029-07-28', name: 'Cuối tuần dịp 27/7', category: 'bridge', periodId: '2029-gratitude-day', note: 'Kỳ nghỉ 3 ngày giữa mùa du lịch hè.' },
-          { date: '2029-07-29', name: 'Cuối tuần dịp 27/7', category: 'bridge', periodId: '2029-gratitude-day', note: 'Ngày cuối kỳ nghỉ 3 ngày.' },
-          { date: '2029-09-01', name: 'Cuối tuần dịp Quốc khánh', category: 'bridge', periodId: '2029-national-day', note: 'Bắt đầu kỳ nghỉ 4 ngày dịp 2/9.' },
+          { date: '2029-07-28', name: 'Cuối tuần sau dịp 27/7', category: 'bridge', periodId: '2029-gratitude-day', note: 'Cuối tuần liền kề tạo kỳ nghỉ 3 ngày giữa mùa du lịch hè.' },
+          { date: '2029-07-29', name: 'Cuối tuần sau dịp 27/7', category: 'bridge', periodId: '2029-gratitude-day', note: 'Ngày cuối kỳ nghỉ 3 ngày.' },
+          { date: '2029-09-01', name: 'Cuối tuần trước Quốc khánh', category: 'bridge', periodId: '2029-national-day', note: 'Bắt đầu kỳ nghỉ 4 ngày dịp 2/9.' },
           { date: '2029-09-02', name: 'Ngày Quốc khánh', category: 'official', periodId: '2029-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (1/2, Chủ Nhật).' },
           { date: '2029-09-03', name: 'Nghỉ liền kề Quốc khánh', category: 'official', periodId: '2029-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (2/2, Thứ Hai).' },
-          { date: '2029-09-04', name: 'Nghỉ bù Quốc khánh', category: 'bridge', periodId: '2029-national-day', note: 'Dự kiến nghỉ bù Thứ Ba do 2/9 rơi vào Chủ Nhật.' },
+          { date: '2029-09-04', name: 'Nghỉ bù Quốc khánh', category: 'compensatory', periodId: '2029-national-day', note: 'Dự kiến ngày nghỉ bù Thứ Ba hưởng nguyên lương do 2/9 rơi vào Chủ Nhật.' },
           { date: '2029-11-24', name: 'Ngày Văn hóa Việt Nam', category: 'official', periodId: '2029-culture-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Bảy).' },
-          { date: '2029-11-25', name: 'Cuối tuần Ngày Văn hóa', category: 'bridge', periodId: '2029-culture-day', note: 'Kỳ nghỉ 3 ngày cuối thu.' },
-          { date: '2029-11-26', name: 'Nghỉ bù Ngày Văn hóa', category: 'bridge', periodId: '2029-culture-day', note: 'Nghỉ bù Thứ Hai do 24/11 rơi vào Thứ Bảy.' },
+          { date: '2029-11-25', name: 'Cuối tuần Ngày Văn hóa', category: 'bridge', periodId: '2029-culture-day', note: 'Cuối tuần liền kề tạo kỳ nghỉ 3 ngày cuối thu.' },
+          { date: '2029-11-26', name: 'Nghỉ bù Ngày Văn hóa', category: 'compensatory', periodId: '2029-culture-day', note: 'Ngày nghỉ bù Thứ Hai hưởng nguyên lương do 24/11 rơi vào Thứ Bảy.' },
         ],
         2030: [
           { date: '2030-01-01', name: 'Tết Dương lịch', category: 'official', periodId: '2030-new-year', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Ba).' },
@@ -3062,23 +3092,26 @@
           { date: '2030-02-02', name: 'Mùng 1 Tết Canh Tuất', category: 'official', periodId: '2030-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (3/5, Thứ Bảy).' },
           { date: '2030-02-03', name: 'Mùng 2 Tết Canh Tuất', category: 'official', periodId: '2030-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (4/5, Chủ Nhật).' },
           { date: '2030-02-04', name: 'Mùng 3 Tết Canh Tuất', category: 'official', periodId: '2030-tet', note: 'Ngày nghỉ lễ hưởng nguyên lương (5/5).' },
-          { date: '2030-02-05', name: 'Mùng 4 Tết (Nghỉ bù)', category: 'bridge', periodId: '2030-tet', note: 'Dự kiến nghỉ bù do Mùng 1–2 trùng cuối tuần.' },
-          { date: '2030-02-06', name: 'Mùng 5 Tết (Nghỉ bù)', category: 'bridge', periodId: '2030-tet', note: 'Ngày cuối kỳ nghỉ Tết dự kiến 7 ngày.' },
+          { date: '2030-02-05', name: 'Mùng 4 Tết (Nghỉ bù)', category: 'compensatory', periodId: '2030-tet', note: 'Dự kiến ngày nghỉ bù hưởng nguyên lương do Mùng 1 trùng Thứ Bảy.' },
+          { date: '2030-02-06', name: 'Mùng 5 Tết (Nghỉ bù)', category: 'compensatory', periodId: '2030-tet', note: 'Dự kiến ngày nghỉ bù hưởng nguyên lương do Mùng 2 trùng Chủ Nhật.' },
           { date: '2030-04-12', name: 'Giỗ Tổ Hùng Vương', category: 'official', periodId: '2030-hung-kings', note: 'Mùng 10/3 Âm lịch (Thứ Sáu) — Hưởng nguyên lương.' },
-          { date: '2030-04-13', name: 'Cuối tuần dịp Giỗ Tổ', category: 'bridge', periodId: '2030-hung-kings', note: 'Kỳ nghỉ 3 ngày cuối tuần.' },
-          { date: '2030-04-14', name: 'Cuối tuần dịp Giỗ Tổ', category: 'bridge', periodId: '2030-hung-kings', note: 'Ngày cuối kỳ nghỉ Giỗ Tổ.' },
+          { date: '2030-04-13', name: 'Cuối tuần sau dịp Giỗ Tổ', category: 'bridge', periodId: '2030-hung-kings', note: 'Cuối tuần liền kề tạo kỳ nghỉ 3 ngày.' },
+          { date: '2030-04-14', name: 'Cuối tuần sau dịp Giỗ Tổ', category: 'bridge', periodId: '2030-hung-kings', note: 'Ngày cuối kỳ nghỉ Giỗ Tổ.' },
+          { date: '2030-04-27', name: 'Cuối tuần trước dịp 30/4 – 1/5', category: 'bridge', periodId: '2030-reunification', note: 'Cuối tuần liền kề trước kỳ nghỉ 30/4 – 1/5.' },
+          { date: '2030-04-28', name: 'Cuối tuần trước dịp 30/4 – 1/5', category: 'bridge', periodId: '2030-reunification', note: 'Cuối tuần liền kề trước kỳ nghỉ 30/4 – 1/5.' },
+          { date: '2030-04-29', name: 'Ngày liền kề trước lễ 30/4', category: 'bridge', periodId: '2030-reunification', note: 'Ngày kẹp Thứ Hai, dễ hoán đổi hoặc xin nghỉ phép nối liền cuối tuần 27–28/04.' },
           { date: '2030-04-30', name: 'Ngày Giải phóng miền Nam', category: 'official', periodId: '2030-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Ba).' },
           { date: '2030-05-01', name: 'Ngày Quốc tế Lao động', category: 'official', periodId: '2030-reunification', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Tư).' },
           { date: '2030-07-27', name: 'Ngày Tổ quốc tri ân (27/7)', category: 'official', periodId: '2030-gratitude-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (Thứ Bảy).' },
-          { date: '2030-07-28', name: 'Cuối tuần dịp 27/7', category: 'bridge', periodId: '2030-gratitude-day', note: 'Kỳ nghỉ 3 ngày giữa mùa du lịch hè.' },
-          { date: '2030-07-29', name: 'Nghỉ bù 27/7', category: 'bridge', periodId: '2030-gratitude-day', note: 'Nghỉ bù Thứ Hai do 27/7 rơi vào Thứ Bảy.' },
-          { date: '2030-08-31', name: 'Cuối tuần dịp Quốc khánh', category: 'bridge', periodId: '2030-national-day', note: 'Bắt đầu kỳ nghỉ 4 ngày dịp 2/9.' },
-          { date: '2030-09-01', name: 'Cuối tuần dịp Quốc khánh', category: 'bridge', periodId: '2030-national-day', note: 'Cao điểm du lịch Quốc khánh.' },
+          { date: '2030-07-28', name: 'Cuối tuần dịp 27/7', category: 'bridge', periodId: '2030-gratitude-day', note: 'Cuối tuần liền kề tạo kỳ nghỉ 3 ngày giữa mùa du lịch hè.' },
+          { date: '2030-07-29', name: 'Nghỉ bù 27/7', category: 'compensatory', periodId: '2030-gratitude-day', note: 'Ngày nghỉ bù Thứ Hai hưởng nguyên lương do 27/7 rơi vào Thứ Bảy.' },
+          { date: '2030-08-31', name: 'Cuối tuần trước Quốc khánh', category: 'bridge', periodId: '2030-national-day', note: 'Bắt đầu kỳ nghỉ 4 ngày dịp 2/9.' },
+          { date: '2030-09-01', name: 'Cuối tuần trước Quốc khánh', category: 'bridge', periodId: '2030-national-day', note: 'Cao điểm du lịch Quốc khánh.' },
           { date: '2030-09-02', name: 'Ngày Quốc khánh', category: 'official', periodId: '2030-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (1/2, Thứ Hai).' },
           { date: '2030-09-03', name: 'Nghỉ liền kề Quốc khánh', category: 'official', periodId: '2030-national-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (2/2, Thứ Ba).' },
-          { date: '2030-11-23', name: 'Cuối tuần Ngày Văn hóa', category: 'bridge', periodId: '2030-culture-day', note: 'Bắt đầu kỳ nghỉ 3 ngày cuối thu.' },
+          { date: '2030-11-23', name: 'Cuối tuần trước Ngày Văn hóa', category: 'bridge', periodId: '2030-culture-day', note: 'Bắt đầu kỳ nghỉ 3 ngày cuối thu.' },
           { date: '2030-11-24', name: 'Ngày Văn hóa Việt Nam', category: 'official', periodId: '2030-culture-day', note: 'Ngày nghỉ lễ hưởng nguyên lương (Chủ Nhật).' },
-          { date: '2030-11-25', name: 'Nghỉ bù Ngày Văn hóa', category: 'bridge', periodId: '2030-culture-day', note: 'Nghỉ bù Thứ Hai do 24/11 rơi vào Chủ Nhật.' },
+          { date: '2030-11-25', name: 'Nghỉ bù Ngày Văn hóa', category: 'compensatory', periodId: '2030-culture-day', note: 'Ngày nghỉ bù Thứ Hai hưởng nguyên lương do 24/11 rơi vào Chủ Nhật.' },
         ],
       };
 
@@ -3094,18 +3127,18 @@
       }
 
       function parseDateStr(dateStr) {
-        const [y, m, d] = dateStr.split('-').map(Number);
-        return new Date(y, m - 1, d);
+        const parts = dateStr.split('-').map(Number);
+        return new Date(parts[0], parts[1] - 1, parts[2]);
       }
 
       function formatViDate(dateStr) {
-        const [y, m, d] = dateStr.split('-');
-        return `${d}/${m}/${y}`;
+        const parts = dateStr.split('-');
+        return `${parts[2]}/${parts[1]}/${parts[0]}`;
       }
 
       function formatShortViDate(dateStr) {
-        const [, m, d] = dateStr.split('-');
-        return `${d}/${m}`;
+        const parts = dateStr.split('-');
+        return `${parts[2]}/${parts[1]}`;
       }
 
       function escapeHtml(str) {
@@ -3117,8 +3150,12 @@
           .replace(/'/g, '&#39;');
       }
 
-      const NOW = new Date();
-      const TODAY_STR = toDateStr(NOW.getFullYear(), NOW.getMonth(), NOW.getDate());
+      function getTodayStr() {
+        const now = new Date();
+        return toDateStr(now.getFullYear(), now.getMonth(), now.getDate());
+      }
+
+      const TODAY_STR = getTodayStr();
 
       // =========================================================================
       // 3. TRẠNG THÁI ỨNG DỤNG (STATE)
@@ -3135,7 +3172,7 @@
       };
 
       // =========================================================================
-      // 4. LOGIC TÍNH TOÁN DỮ LIỆU LỊCH & PHÂN TÍCH LỊCH TRÌNH
+      // 4. LOGIC TÍNH TOÁN LỊCH & PHÂN TÍCH LỊCH TRÌNH DU LỊCH
       // =========================================================================
       function getHolidayMap(year) {
         const entries = HOLIDAY_ENTRIES_BY_YEAR[year] || [];
@@ -3150,12 +3187,13 @@
         const result = [];
         for (let m = 0; m < 12; m++) {
           const firstDayOfMonth = new Date(year, m, 1);
-          // Quy đổi sao cho Thứ Hai là cột đầu tiên (T2 = 0 ... CN = 6)
+          // Quy đổi sang Thứ Hai đầu tuần (T2 = 0 ... CN = 6)
           const startOffset = (firstDayOfMonth.getDay() + 6) % 7;
           const daysInMonth = new Date(year, m + 1, 0).getDate();
 
           const days = [];
           let officialCount = 0;
+          let compensatoryCount = 0;
           let bridgeCount = 0;
 
           // Ô đệm đầu tháng
@@ -3180,6 +3218,8 @@
 
             if (holiday && holiday.category === 'official') {
               officialCount++;
+            } else if (holiday && holiday.category === 'compensatory') {
+              compensatoryCount++;
             } else if (holiday && holiday.category === 'bridge') {
               bridgeCount++;
             }
@@ -3199,17 +3239,20 @@
             name: MONTH_NAMES[m],
             days,
             officialCount,
+            compensatoryCount,
             bridgeCount,
-            isQuietMonth: officialCount === 0 && bridgeCount === 0,
+            isQuietMonth: officialCount === 0 && compensatoryCount === 0 && bridgeCount === 0,
           });
         }
         return result;
       }
 
-      function getMonthOfficialHolidays(year, monthIndex) {
+      function getMonthPaidHolidays(year, monthIndex) {
         const entries = HOLIDAY_ENTRIES_BY_YEAR[year] || [];
         const prefix = `${year}-${padTwo(monthIndex + 1)}-`;
-        return entries.filter((e) => e.category === 'official' && e.date.startsWith(prefix));
+        return entries.filter(
+          (e) => (e.category === 'official' || e.category === 'compensatory') && e.date.startsWith(prefix)
+        );
       }
 
       function analyzeTrip(holidayMap) {
@@ -3222,6 +3265,7 @@
         const endDateObj = parseDateStr(end);
 
         const officialDays = [];
+        const compensatoryDays = [];
         const bridgeDays = [];
         let totalDays = 0;
         let weekendCount = 0;
@@ -3238,6 +3282,8 @@
           if (entry) {
             if (entry.category === 'official') {
               officialDays.push(entry);
+            } else if (entry.category === 'compensatory') {
+              compensatoryDays.push(entry);
             } else {
               bridgeDays.push(entry);
             }
@@ -3269,13 +3315,17 @@
         let title = 'Rất lý tưởng — Né đông thành công';
         let summary = '';
 
-        if (officialDays.length > 0 || bridgeDays.length > 0) {
+        if (officialDays.length > 0 || compensatoryDays.length > 0 || bridgeDays.length > 0) {
           verdict = 'avoid';
           title = 'Cảnh báo: Trùng kỳ nghỉ lễ đông đúc';
           const names = Array.from(
-            new Set([...officialDays, ...bridgeDays].map((item) => item.name))
+            new Set([...officialDays, ...compensatoryDays, ...bridgeDays].map((item) => item.name))
           ).slice(0, 3);
-          summary = `Lịch trình của bạn chạm ${officialDays.length} ngày chính lễ và ${bridgeDays.length} ngày nghỉ bù/liền kề (${names.join(', ')}). Các điểm du lịch, vé máy bay và khách sạn có thể quá tải và tăng giá mạnh.`;
+          const parts = [];
+          if (officialDays.length > 0) parts.push(`${officialDays.length} ngày chính lễ`);
+          if (compensatoryDays.length > 0) parts.push(`${compensatoryDays.length} ngày nghỉ bù`);
+          if (bridgeDays.length > 0) parts.push(`${bridgeDays.length} ngày liền kề/cuối tuần kề lễ`);
+          summary = `Lịch trình của bạn chạm ${parts.join(', ')} (${names.join(', ')}). Các điểm du lịch, vé máy bay và khách sạn có thể quá tải và tăng giá mạnh.`;
         } else if (nearHolidayNames.length > 0) {
           verdict = 'caution';
           title = 'Cần lưu ý — Khá sát ngày lễ';
@@ -3296,6 +3346,7 @@
           totalDays,
           nights,
           officialDays,
+          compensatoryDays,
           bridgeDays,
           weekendCount,
           nearHolidayNames,
@@ -3325,10 +3376,13 @@
         const dateLabel = formatViDate(cell.dateStr);
         if (cell.holiday) {
           if (cell.holiday.category === 'official') {
-            return `${dateLabel} — ${cell.holiday.name} (Nghỉ lễ hưởng nguyên lương). ${cell.holiday.note}`;
+            return `${dateLabel} — ${cell.holiday.name} (Chính lễ — Hưởng nguyên lương). ${cell.holiday.note}`;
+          }
+          if (cell.holiday.category === 'compensatory') {
+            return `${dateLabel} — ${cell.holiday.name} (Ngày nghỉ bù — Hưởng nguyên lương). ${cell.holiday.note}`;
           }
           if (state.showBridgeDays) {
-            return `${dateLabel} — ${cell.holiday.name} (Vùng đệm đông đúc). ${cell.holiday.note}`;
+            return `${dateLabel} — ${cell.holiday.name} (Ngày liền kề / Cuối tuần kề lễ — Đông đúc). ${cell.holiday.note}`;
           }
         }
         if (cell.isWeekend) {
@@ -3345,6 +3399,7 @@
         const isEndpoint = isTripEndpoint(cell.dateStr);
         const isMiddle = isTripMiddle(cell.dateStr);
         const isOfficial = cell.holiday && cell.holiday.category === 'official';
+        const isCompensatory = cell.holiday && cell.holiday.category === 'compensatory';
         const isBridge = state.showBridgeDays && cell.holiday && cell.holiday.category === 'bridge';
 
         if (isEndpoint) {
@@ -3353,8 +3408,10 @@
           classes.push('bg-indigo-100 text-indigo-900 font-medium');
         } else if (isOfficial) {
           classes.push('bg-rose-600 text-white font-bold shadow-sm hover:bg-rose-700');
+        } else if (isCompensatory) {
+          classes.push('bg-orange-500 text-white font-bold shadow-sm hover:bg-orange-600');
         } else if (isBridge) {
-          classes.push('bg-amber-100 text-amber-900 font-bold border border-amber-300 hover:bg-amber-200');
+          classes.push('bg-yellow-100 text-yellow-900 font-bold border border-yellow-400 hover:bg-yellow-200');
         } else if (state.highlightWeekends && cell.isWeekend) {
           classes.push('bg-slate-100 text-slate-600 font-medium hover:bg-slate-200/70');
         } else {
@@ -3373,24 +3430,15 @@
       // =========================================================================
       function renderYearSwitcher() {
         const container = document.getElementById('year-switcher');
-        const isFirst = state.selectedYear <= SUPPORTED_YEARS[0];
-        const isLast = state.selectedYear >= SUPPORTED_YEARS[SUPPORTED_YEARS.length - 1];
+        const minYear = SUPPORTED_YEARS[0];
+        const maxYear = SUPPORTED_YEARS[SUPPORTED_YEARS.length - 1];
 
         const yearButtonsHtml = SUPPORTED_YEARS.map((year) => {
           const isActive = state.selectedYear === year;
-          const activeClass = isActive
-            ? 'bg-white text-rose-600 shadow-sm'
-            : 'text-slate-600 hover:text-slate-900';
-          return `
-            <button
-              type="button"
-              data-action="select-year"
-              data-year="${year}"
-              class="px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer ${activeClass}"
-            >
-              ${year}
-            </button>
-          `;
+          const cls = isActive
+            ? 'px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 shadow-sm'
+            : 'px-3.5 py-1.5 rounded-xl text-sm font-semibold transition cursor-pointer text-slate-600 hover:text-slate-900';
+          return `<button type="button" data-action="select-year" data-year="${year}" class="${cls}">${year}</button>`;
         }).join('');
 
         container.innerHTML = `
@@ -3398,11 +3446,11 @@
             type="button"
             data-action="step-year"
             data-delta="-1"
-            ${isFirst ? 'disabled' : ''}
+            ${state.selectedYear <= minYear ? 'disabled' : ''}
             class="p-2 rounded-xl text-slate-600 hover:bg-white hover:text-slate-900 disabled:opacity-35 disabled:hover:bg-transparent transition cursor-pointer disabled:cursor-not-allowed"
             aria-label="Năm trước"
           >
-            <svg class="w-4 h-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -3411,11 +3459,11 @@
             type="button"
             data-action="step-year"
             data-delta="1"
-            ${isLast ? 'disabled' : ''}
+            ${state.selectedYear >= maxYear ? 'disabled' : ''}
             class="p-2 rounded-xl text-slate-600 hover:bg-white hover:text-slate-900 disabled:opacity-35 disabled:hover:bg-transparent transition cursor-pointer disabled:cursor-not-allowed"
             aria-label="Năm sau"
           >
-            <svg class="w-4 h-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -3426,6 +3474,7 @@
         const container = document.getElementById('metrics-section');
         const entries = HOLIDAY_ENTRIES_BY_YEAR[state.selectedYear] || [];
         const officialTotal = entries.filter((e) => e.category === 'official').length;
+        const compensatoryTotal = entries.filter((e) => e.category === 'compensatory').length;
         const peakTotal = entries.length;
         const periodCount = periods.length;
         const quietMonths = months.filter((m) => m.isQuietMonth);
@@ -3454,15 +3503,20 @@
             </div>
             <div>
               <div class="text-xs font-medium uppercase tracking-wider text-slate-500">Nghỉ lễ hưởng nguyên lương</div>
-              <div class="flex items-baseline gap-2 mt-0.5">
+              <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mt-0.5">
                 <span class="text-2xl font-bold text-slate-900">${officialTotal} ngày</span>
-                <span class="text-xs text-rose-600 font-medium">(${periodCount} đợt lễ)</span>
+                <span class="text-xs text-rose-600 font-medium">${periodCount} đợt lễ</span>
+                ${
+                  compensatoryTotal > 0
+                    ? `<span class="text-xs text-orange-600 font-semibold">+ ${compensatoryTotal} ngày bù</span>`
+                    : ''
+                }
               </div>
             </div>
           </div>
 
           <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm flex items-center gap-4">
-            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+            <div class="w-12 h-12 rounded-2xl bg-yellow-50 text-yellow-600 flex items-center justify-center shrink-0">
               <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
@@ -3471,7 +3525,7 @@
               <div class="text-xs font-medium uppercase tracking-wider text-slate-500">Tổng ngày cao điểm du lịch</div>
               <div class="flex items-baseline gap-2 mt-0.5">
                 <span class="text-2xl font-bold text-slate-900">${peakTotal} ngày</span>
-                <span class="text-xs text-amber-700 font-medium">gồm bù & cuối tuần kề lễ</span>
+                <span class="text-xs text-yellow-700 font-medium">gồm bù & liền kề cuối tuần</span>
               </div>
             </div>
           </div>
@@ -3500,16 +3554,16 @@
             data-action="toggle-bridge"
             class="inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs sm:text-sm font-medium border transition cursor-pointer ${
               state.showBridgeDays
-                ? 'bg-amber-50 border-amber-300 text-amber-900'
+                ? 'bg-yellow-50 border-yellow-400 text-yellow-900'
                 : 'bg-white border-slate-200 text-slate-600'
             }"
           >
             <span class="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[10px] ${
-              state.showBridgeDays ? 'bg-amber-500 text-white' : 'bg-slate-200'
+              state.showBridgeDays ? 'bg-yellow-500 text-white' : 'bg-slate-200'
             }">
               ${state.showBridgeDays ? '✓' : ''}
             </span>
-            Hiện vùng đệm đông đúc
+            Hiện ngày liền kề cuối tuần
           </button>
 
           <button
@@ -3563,14 +3617,14 @@
           return;
         }
 
-        const boxTheme =
+        const boxClasses =
           trip.verdict === 'ideal'
             ? 'bg-emerald-50 border-emerald-200'
             : trip.verdict === 'caution'
             ? 'bg-amber-50 border-amber-200'
             : 'bg-rose-50 border-rose-200';
 
-        const badgeTheme =
+        const badgeClasses =
           trip.verdict === 'ideal'
             ? 'bg-emerald-600 text-white'
             : trip.verdict === 'caution'
@@ -3578,9 +3632,9 @@
             : 'bg-rose-600 text-white';
 
         const rangeText =
-          trip.startDate === trip.endDate
-            ? formatViDate(trip.startDate)
-            : `${formatViDate(trip.startDate)} → ${formatViDate(trip.endDate)}`;
+          trip.startDate !== trip.endDate
+            ? `${formatViDate(trip.startDate)} → ${formatViDate(trip.endDate)}`
+            : formatViDate(trip.startDate);
 
         const inspectedHtml = state.inspectedHoliday
           ? `
@@ -3592,23 +3646,19 @@
           : '';
 
         container.innerHTML = `
-          <div class="rounded-xl p-4 border transition-all ${boxTheme}">
+          <div class="rounded-xl p-4 border transition-all ${boxClasses}">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
               <div class="space-y-1">
                 <div class="flex flex-wrap items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide ${badgeTheme}">
+                  <span class="px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide ${badgeClasses}">
                     ${escapeHtml(trip.title)}
                   </span>
-                  <span class="text-sm font-bold text-slate-900">
-                    ${rangeText}
-                  </span>
+                  <span class="text-sm font-bold text-slate-900">${rangeText}</span>
                   <span class="text-xs font-medium text-slate-600 bg-white/80 px-2 py-0.5 rounded-lg border border-slate-200/70">
                     ${trip.totalDays} ngày ${trip.nights} đêm
                   </span>
                 </div>
-                <p class="text-sm text-slate-700 leading-relaxed">
-                  ${escapeHtml(trip.summary)}
-                </p>
+                <p class="text-sm text-slate-700 leading-relaxed">${escapeHtml(trip.summary)}</p>
                 ${inspectedHtml}
               </div>
               <button
@@ -3626,7 +3676,12 @@
       function renderCalendarGrid(months) {
         const container = document.getElementById('calendar-grid');
         const visibleMonths = state.onlyHolidayMonths
-          ? months.filter((m) => m.officialCount > 0 || (state.showBridgeDays && m.bridgeCount > 0))
+          ? months.filter(
+              (m) =>
+                m.officialCount > 0 ||
+                m.compensatoryCount > 0 ||
+                (state.showBridgeDays && m.bridgeCount > 0)
+            )
           : months;
 
         const weekdayHeaderHtml = WEEKDAY_LABELS.map((label, idx) => {
@@ -3637,10 +3692,19 @@
         container.innerHTML = visibleMonths
           .map((month) => {
             let statusBadgeHtml = '';
-            if (month.officialCount > 0) {
+            if (month.officialCount > 0 && month.compensatoryCount > 0) {
+              statusBadgeHtml = `
+                <div class="flex items-center gap-1">
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-rose-100 text-rose-700">${month.officialCount} lễ</span>
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-orange-100 text-orange-700">+${month.compensatoryCount} bù</span>
+                </div>
+              `;
+            } else if (month.officialCount > 0) {
               statusBadgeHtml = `<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-rose-100 text-rose-700">${month.officialCount} ngày lễ</span>`;
+            } else if (month.compensatoryCount > 0) {
+              statusBadgeHtml = `<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-orange-100 text-orange-700">${month.compensatoryCount} ngày bù</span>`;
             } else if (month.bridgeCount > 0 && state.showBridgeDays) {
-              statusBadgeHtml = `<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-800">Sát lễ đông</span>`;
+              statusBadgeHtml = `<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-yellow-100 text-yellow-800">Liền kề lễ</span>`;
             } else {
               statusBadgeHtml = `<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-700">✨ Vắng lễ</span>`;
             }
@@ -3653,13 +3717,16 @@
 
                 const inRange = isInTripRange(cell.dateStr);
                 const isOfficial = cell.holiday && cell.holiday.category === 'official';
+                const isCompensatory = cell.holiday && cell.holiday.category === 'compensatory';
                 const isBridge = state.showBridgeDays && cell.holiday && cell.holiday.category === 'bridge';
 
                 let dotHtml = '';
                 if (inRange && isOfficial) {
                   dotHtml = '<span class="w-1.5 h-1.5 rounded-full bg-rose-400 absolute bottom-0.5 pointer-events-none"></span>';
+                } else if (inRange && isCompensatory) {
+                  dotHtml = '<span class="w-1.5 h-1.5 rounded-full bg-orange-400 absolute bottom-0.5 pointer-events-none"></span>';
                 } else if (inRange && isBridge) {
-                  dotHtml = '<span class="w-1.5 h-1.5 rounded-full bg-amber-400 absolute bottom-0.5 pointer-events-none"></span>';
+                  dotHtml = '<span class="w-1.5 h-1.5 rounded-full bg-yellow-400 absolute bottom-0.5 pointer-events-none"></span>';
                 }
 
                 return `
@@ -3677,20 +3744,21 @@
               })
               .join('');
 
-            const monthHolidays = getMonthOfficialHolidays(state.selectedYear, month.monthIndex);
+            const monthHolidays = getMonthPaidHolidays(state.selectedYear, month.monthIndex);
             const footerHtml =
               monthHolidays.length > 0
                 ? `
                   <div class="px-3.5 py-2.5 bg-rose-50/60 border-t border-rose-100/80 space-y-1">
                     ${monthHolidays
-                      .map(
-                        (h) => `
+                      .map((h) => {
+                        const dateColor = h.category === 'compensatory' ? 'text-orange-600' : 'text-rose-600';
+                        return `
                           <div class="flex items-start gap-1.5 text-[11px] leading-snug">
-                            <span class="font-bold text-rose-600 shrink-0">${formatShortViDate(h.date)}</span>
+                            <span class="font-bold ${dateColor} shrink-0">${formatShortViDate(h.date)}</span>
                             <span class="text-slate-700 truncate" title="${escapeHtml(h.name)}">${escapeHtml(h.name)}</span>
                           </div>
-                        `
-                      )
+                        `;
+                      })
                       .join('')}
                   </div>
                 `
